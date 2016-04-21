@@ -52,7 +52,7 @@
                 <li>列表项目三</li>
             </ul>
             </article>
-        <div>
+        <div id="pics">
             <h3>图片</h3>
             <dl>
                 <dt></dt>
@@ -72,7 +72,7 @@
                 <li>排名2</li>
                 <li>排名3</li>
             </ol>
-            <p>下面是一个表格</p>
+            <span>下面是一个表格</span>
             <table>
                 <thead>
                     <tr><th>表头</th><th>表头</th><th>表头</th></tr>
@@ -82,35 +82,48 @@
                         <tr><td>表内容单元格</td><td>表内容单元格</td><td><a href="#">操作</a></td></tr>
                         <tr><td>表内容单元格</td><td>表内容单元格</td><td><a href="#">操作</a></td></tr>
                         <tr><td>表内容单元格</td><td>表内容单元格</td><td><a href="#">操作</a></td></tr>
-                        <tr><td>总计</td><td colspan="2">1000</td></tr>
+                        <tr id="tbottom"><td>总计</td><td colspan="2">1000</td></tr>
                     </tbody>
             </table>
         </article>
-        <aside>
-            <h2>侧栏的标题</h2>
-            <h2>侧栏注册窗口标题</h2>
+        <aside>           
+            <h3>侧栏注册窗口标题</h3>
             <form action="" method="post">
-                <label>请输入邮箱地址：<input type="text" name="email" placeholder="这是一个文本输入框"/></label>
-                <br/><span>邮箱地址请按格式输入</span><br/>
-                <label>请输入密码：<input type="password" name="pwd" placeholder="这是一个文本输入框"/></label>
-                <label>请再次输入密码：<input type="password" name="pw" placeholder="这是一个文本输入框"/></label>
-                <br/><span>密码为6-16位英文数字</span><br/>
-                <span>性别：</span>
-                <label><input type="radio" checked="checked" name="sex" value="男"/>男</label>
-                <label><input type="radio" name="sex" value="女"/>女</label>
-                <label>城市：
+                <div>
+                    <label class="infor">请输入邮箱地址</label><input type="text" name="email" placeholder="这是一个文本输入框"/>
+                    <br/><span class="tip">邮箱地址请按格式输入</span><br/>
+                </div>
+                <div>
+                    <label class="infor">请输入密码</label><input type="password" name="pwd" placeholder="这是一个文本输入框"/>
+                </div>
+                <div>
+                    <label class="infor">请再次输入密码</label><input type="password" name="pw" placeholder="这是一个文本输入框"/>
+                    <br/><span class="tip">密码为6-16位英文数字</span><br/>
+                </div>
+                <div>
+                    <span class="infor">性别</span>
+                    <label><input type="radio" checked="checked" name="sex" value="男"/>男</label>
+                    <label><input type="radio" name="sex" value="女"/>女</label>
+                </div>
+                <div>
+                    <label class="infor">城市</label>
                     <select name="city">
                         <option value="bj" selected>北京</option>
                         <option value="sh">上海</option>
                         <option value="hz">杭州</option>
                     </select>
-                </label>
-                <span>爱好：</span>
-                <label><input type="checkbox" name="hobbit" value="sport"/>运动</label>
-                <label><input type="checkbox" name="hobbit" value="art"/>艺术</label>
-                <label><input type="checkbox" name="hobbit" value="sic"/>科学</label>
-                <label>个人描述：<textarea placeholder="这是一个多行输入框，输入您的个人描述"></textarea></label>
-                <input type="submit" value="确认提交"/>
+                    
+                </div>
+                <div>
+                    <span class="infor">爱好</span>
+                    <label><input type="checkbox" name="hobbit" value="sport"/>运动</label>
+                    <label><input type="checkbox" name="hobbit" value="art"/>艺术</label>
+                    <label><input type="checkbox" name="hobbit" value="sic"/>科学</label>
+                </div>
+                <div>
+                    <label class="infor">个人描述</label><textarea placeholder="这是一个多行输入框，输入您的个人描述"></textarea>
+                    <input type="submit" value="确认提交" id="submitbutton"/>
+                </div>
             </form>
         </aside>
         <footer>
