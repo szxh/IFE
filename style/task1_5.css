@@ -1,0 +1,191 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:'sans-serif';
+    background:#dedede;
+    line-height:150%;
+    min-width:740px;
+}
+
+header{
+    position:relative;
+    height:60px;
+    background:#333333;
+}
+
+header a img{
+    padding-left:20px;
+    height:58px;
+}
+
+header ul{
+    position:absolute;
+    top:0;
+    right:10px;
+}
+
+header ul li{
+    text-align:center;
+    width:80px;
+    display:block;
+    float:left;
+    padding:20px 10px;
+}
+
+header ul li a{
+    text-decoration:none;
+    color:white;
+    font-size:12px;
+}
+
+header ul li:hover{
+    border-bottom:1px solid red;
+    background:#474747;
+    border-radius:10px;
+}
+
+article,aside,#pics{
+    display:block;
+    margin:30px;
+    padding:20px;
+    background:white;
+    box-shadow:1px 1px 2px 1px #848484;
+}
+
+article h2{padding:5px 0;}
+
+article h3{
+    padding:10px 0;
+    color:#808080;
+    font-size:16px;
+}
+article a{
+    color:blue;
+}
+article a:hover{
+    color:red;
+}
+.author,.atime{
+    line-height:30px;
+    color:#808080;
+    font-size:12px;
+}
+article p{
+    text-indent:2em;
+    font-size:12px;
+}
+article img{
+    padding:20px 0 20px 0;
+    width:150px;
+    height:150px;
+}
+article ul li{
+    list-style-type:none;
+}
+div dl dd{
+    width:120px;
+    margin:15px 0 15px 35px;
+    border:1px solid #ccc;
+    float:left;
+}
+div dl dd span{
+    display:block;
+    font-size:12px;
+    text-align:center;
+    margin:5px;
+}
+div dl dd img{
+    width:100px;
+    padding:5px 10px;
+    height:80px;
+}
+article ol{
+    margin:10px 40px;
+    font-size:12px;
+}
+#fz{
+    font-size:12px;
+}
+article table{
+    width:100%;
+    border-collapse:collapse;
+    font-size:12px;
+}
+article table tr th{
+    color:white;
+    background:#333;
+    text-align:left;
+}
+article table tr td{
+    border:1px solid #ccc;
+}
+#tbottom{
+    background:#ccc;
+}
+aside h3{
+    height:40px;
+    line-height:40px;
+    padding-left:10px;
+    border-left:3px solid #ccc;
+    font-size:16px;
+}
+aside form div{
+    font-size:12px;
+    margin:15px 0;
+}
+#submitbutton{
+    width:100%;
+    height:40px;
+    background:#128fdc;
+    color:white;
+    border-radius:10px;
+    font-size:19px;
+    border:none;
+    margin-top:20px;    
+}
+.infor{
+    float:left;
+    text-align:right;
+    width:35%;
+    padding-right:15px;
+}
+.tip{
+    margin-left:35%;
+    padding-left:15px;
+    font-size:12px;
+    color: #aaa;
+}
+aside textarea{
+    width:50%;
+    height:100px;
+}
+#submitbutton:hover{
+    background:#0063dc;
+}
+footer{
+    width:100%;
+    height:50px;
+    background:black;
+    color:white;
+    text-align:center;
+    line-height:50px;
+    font-size:14px;
+}
+aside{
+    float:right;
+    width:320px;
+}
+article,#pics{
+    overflow:hidden;
+    min-width:250px;
+    margin-right:420px;
+}
+
+
+
+
+
+
