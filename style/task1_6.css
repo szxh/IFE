@@ -7,6 +7,9 @@
     height:1386px;
     margin:0;
     padding:0 44px;
+    border:1px solid #938e8c;
+    margin:auto;
+    box-shadow:2px 2px 2px #938e8c;
 }
 header{
     width:892px;
