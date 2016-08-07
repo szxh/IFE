@@ -1,0 +1,37 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<title>task2_20</title>
+		<meta charset="utf-8"/>
+		<style>
+			.queue-wrap>span{
+				background-color: red;
+				height: 30px;
+				min-width: 20px;
+				line-height: 30px;
+				text-align: center;
+				display: inline-block;
+				margin: 5px;
+				padding: 2px;
+				cursor: pointer;
+			}
+			.white{
+				color: white;
+			}
+		</style>
+	</head>
+	<body>
+		<form class="form-all"
+			><textarea rows="5" cols="20" placeholder="请输入文本"></textarea
+			><input type="button" value="左侧入"/
+			><input type="button" value="右侧入"/
+			><input type="button" value="左侧出"/
+			><input type="button" value="右侧出"/
+			><input type="text" value=""/
+			><input type="button" value="查询"/
+			></form>
+		<div class="queue-wrap"></div>
+		<script src="js/EventUtil.js"></script>
+		<script src="js/task2_20.js"></script>
+	</body>
+</html>

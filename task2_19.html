@@ -1,0 +1,36 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<title>task2_19</title>
+		<meta charset="utf-8"/>
+		<style>
+			.queue-wrap{
+				display: -webkit-flex;
+				display: flex;
+				flex-wrap: nowrap;
+				align-items: flex-end;
+			}
+			.queue-wrap span{
+				background-color: red;
+				margin: 5px;
+				cursor: pointer;
+				flex: 1;
+				max-width: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<form class="form-all">
+			<input type="text" value=""/>
+			<input type="button" value="左侧入"/>
+			<input type="button" value="右侧入"/>
+			<input type="button" value="左侧出"/>
+			<input type="button" value="右侧出"/>
+			<input type="button" value="冒泡排序"/>
+			<input type="button" value="随机50组"/>
+		</form>
+		<div class="queue-wrap"></div>
+		<script src="js/EventUtil.js"></script>
+		<script src="js/task2_19.js"></script>
+	</body>
+</html>
