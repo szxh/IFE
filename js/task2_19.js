@@ -70,7 +70,7 @@ function filter(text) {
 //插入节点
 function insertNode(pos, heightValue) {
 	var numSpan = document.createElement('span');
-	numSpan.style.height = heightValue + '%';
+	numSpan.style.height = heightValue + 'px';
 	if (pos === "左侧入") {
 		queue.insertBefore(numSpan, queue.firstChild);
 	}
@@ -99,25 +99,30 @@ function deleteNode(pos) {
 
 //冒泡排序
 function bubbleSort() {
-	
-	for (var i = 0; i < queue.childNodes.length-1; i++) {
-		for (var j = queue.childNodes.length-1; j > i; j--) {
-			if (queue.childNodes[j].style.height.slice(0,-1) < queue.childNodes[j-1].style.height.slice(0,-1)){
-				var temp;
-				temp = queue.childNodes[j].style.height;
-				queue.childNodes[j].style.height = queue.childNodes[j-1].style.height;
-				queue.childNodes[j-1].style.height = temp;
+		//用setInterval写一个冒泡排序
+		var i = queue.childNodes.length - 1;
+		var j = 0;
+		var timer = setInterval(function () {
+			if (j === i) {
+				j = 0;
+				i--;
 			}
-		}
+			if (i < 1) {
+				clearInterval(timer);
+			}
+			if (queue.childNodes[j].offsetHeight > queue.childNodes[j+1].offsetHeight) {
+				swap(queue.childNodes[j], queue.childNodes[j+1]);
+			}
+			j++;
+		}, 10);
 	}
-}
 
 //交换函数
-function swap(a,b) {
+function swap(a, b) {
 	var temp;
-	temp = a;
-	a = b;
-	b = temp;
+	temp = a.style.height;
+	a.style.height = b.style.height;
+	b.style.height = temp;
 }
 
 //创建柱高度的数值数组
