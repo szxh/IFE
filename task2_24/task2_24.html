@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>task_24</title>
+		<style>
+			.root {
+				display: flex;
+				height: 150px;
+				justify-content: center;
+				border: 1px solid black;
+				margin-top: 200px;
+			}
+			.child1 {
+				display: flex;
+				flex: 1;
+				border: 1px solid black;
+				margin: 10px;
+			}
+			.child2 {
+				display: flex;
+				flex: 1;
+				border: 1px solid black;
+				margin: 10px;
+			}
+			.child3 {
+				display: flex;
+				flex: 1;
+				border: 1px solid black;
+				margin: 10px;
+			}
+			.child4 {
+				flex-shrink :1;
+				flex: 1;
+				border: 1px solid black;
+				margin: 10px;
+			}
+			.search {
+				margin-top:50px;
+			}
+			.new-node {
+				flex: 1;
+				border: 1px solid black;
+				margin: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="root">super<!--
+		 --><div class="child1">cat
+				<div class="child2">apple
+					<div class="child3">peor</div>
+					<div class="child3">pig</div>
+					<div class="child3">cola</div>
+					<div class="child3">soccer</div>
+				</div>
+				<div class="child2">phone</div>
+				<div class="child2">
+					<div class="child3">book</div>
+					<div class="child3">school</div>
+				</div>
+			</div>
+			<div class="child1">note
+				<div class="child2">human
+					<div class="child3">code</div>
+					<div class="child3">operate</div>
+					<div class="child3">man</div>
+				</div>
+				<div class="child2">program
+					<div class="child3">bement
+						<div class="child4">cat</div>
+					</div>
+					<div class="child3">glass</div>
+				</div>
+			</div>
+			<div class="child1">fish</div>
+		</div>
+		<form class="search">
+			<input type="button" value="深度优先遍历"/>
+			<input type="button" value="广度优先遍历"/>
+			<input type="text" value=""/>
+			<input type="button" value="深度优先搜索"/>
+			<input type="button" value="广度优先搜索"/>
+			<input type="button" value="删除" />
+			<input type="text" />
+			<input type="button" value="添加" />
+		</form>
+		<script type="text/javascript" src="EventUtil.js"></script>
+		<script type="text/javascript" src="task2_24.js"></script>
+	</body>
+</html>
