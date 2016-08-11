@@ -1,24 +1,26 @@
 var searchWrap = $('.search')[0],
 	root = $('.root')[0],
-	searchText = '',
-	addText = '',
-	nodeSelected = null,
-	nodeList = [],
-	timer = null,
-	currentQueue = null,
-	queue = [];
+	searchText = '',//要搜索的文本
+	addText = '',//要添加的文本
+	nodeSelected = null,//保存选中的数据
+	nodeList = [],//保存渲染所用的数据
+	timer = null,//记录超时调用函数返回的id
+	currentQueue = null,//广度优先搜索处理的当前节点
+	queue = [];//广度优先搜索的队列，通过控制进队出队为currentQueue赋值
 
 //自制$选择器
 function $(selector) {
 	return document.querySelectorAll(selector);
 }
 
+//事件委托
 EventUtil.addHandler(searchWrap, 'click', render);
 EventUtil.addHandler(root, 'click', isSelected);
 
+//渲染
 function render(event) {
-	var event = EventUtil.getEvent(event),
-		target = EventUtil.getTarget(event);
+	event = EventUtil.getEvent(event);
+	var target = EventUtil.getTarget(event);
 	switch(target.value) {
 		case '深度优先遍历':
 			reset();
@@ -52,6 +54,7 @@ function render(event) {
 			break;
 	}
 }
+
 //深度优先遍历
 function traverseDF(node) {
 	if (node) {
@@ -76,6 +79,7 @@ function traverseBF(node) {
 		}
 	}
 }
+
 //延迟改变背景色
 function changeColor(text) {
 	console.log(nodeList[0].firstChild.nodeValue);
@@ -92,6 +96,7 @@ function changeColor(text) {
 	timer = setTimeout(colorC, 500);
 }
 
+//延迟函数所调用的函数
 function colorC() {
 	num++;
 	if (num < nodeList.length){
@@ -107,6 +112,7 @@ function colorC() {
 		nodeList[num-1].style.backgroundColor = 'white';
 	}
 }
+
 //点击按钮后重置数据并取消超时调用
 function reset() {
 	nodeList = [];
@@ -119,23 +125,26 @@ function reset() {
 		treeNode[i].style.backgroundColor = 'white';
 	}
 }
+
 //确定点击选择到的元素
 function isSelected(event) {
 	reset();
-	var event = EventUtil.getEvent(event),
-		target = EventUtil.getTarget(event);
+	event = EventUtil.getEvent(event);
+	var target = EventUtil.getTarget(event);
 	if (nodeSelected !== null) {
 		nodeSelected.style.backgroundColor = 'white';
 	}
 	target.style.backgroundColor = 'orange';
 	nodeSelected = target;
 }
+
 //删除选中节点
 function removeNode() {
 	if (nodeSelected) {
 		nodeSelected.parentNode.removeChild(nodeSelected);
 	}
 }
+
 //添加节点
 function addNode() {
 	if (addText) {
