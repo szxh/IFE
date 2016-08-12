@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>task_25</title>
+		<style>
+			.root {
+				width: 300px;
+				display: flex;
+				flex-wrap: wrap;
+				border: 1px solid black;
+				cursor: pointer;
+				margin: 0 auto;
+			}
+			.child1 {
+				display: flex;
+				flex: 1;
+				flex-basis: 80%;
+				flex-wrap: wrap;
+				border: 1px solid black;
+				margin: 10px;
+			}
+			.child2 {
+				flex: 1;
+				flex-wrap: wrap;
+				flex-basis: 90%;
+				border: 1px solid black;
+				margin: 10px;
+			}
+			.search {
+				margin: 50px 0 50px 25%;
+			}
+			input[type=button] {
+				box-shadow: 3px 3px 10px #707278;
+				border: none;
+				background-color: #ffffff;
+				width: 100px;
+				height: 20px;
+			}
+			.new-node {
+				display: flex;
+				flex-wrap: wrap;
+				flex: 1;
+				flex-basis: 90%;
+				border: 1px solid black;
+				margin: 10px;
+			}
+			.hide {
+				display: none;
+			}
+			span {
+				display: inline-block;
+				border: 1px solid black;
+				width: 20px;
+				height: 20px;
+				text-align: center;
+				line-height: 20px;
+				margin: 5px;
+			}
+		</style>
+	</head>
+	<body>
+		<form class="search">
+			<input type="text" value="" />
+			<input type="button" value="搜索" />
+			<input type="text" />
+			<input type="button" value="添加" />
+			<input type="button" value="删除" />
+		</form>
+		<div class="root">super<!--
+		 --><div class="child1">cat<!--
+		     --><div class="child2">apple</div>
+				<div class="child2">phone</div>
+				<div class="child2">orange</div>
+			</div>
+			<div class="child1">note<!--
+		     --><div class="child2">human</div>
+				<div class="child2">program</div>
+				<div class="child2">program</div>
+			</div>
+			<div class="child1">fish<!--
+		     --><div class="child2">apple</div>
+				<div class="child2">phone</div>
+				<div class="child2">orange</div>
+			</div>
+		</div>
+		
+		<script type="text/javascript" src="EventUtil.js"></script>
+		<script type="text/javascript" src="task2_25.js"></script>
+	</body>
+</html>
