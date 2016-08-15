@@ -1,8 +1,8 @@
 ##**插件介绍**
 使用方法：
 
-在html中，写入一个钩子，'<div class="className"></div>' <br/>
-var layer = new floatLayer();<br/>
+在html中，写入一个块状元素钩子 例如<div>=></div><br/>
+var layer = new floatLayer(在此传入钩子);<br/>
 layer.hide();//隐藏浮出层<br/>
 var btn = ...//负责显示浮出层的按钮<br/>
 EventUtil.addHandler(btn, 'click', layer.show.bind(layer));//将显示方法绑定到按钮上<br/>
