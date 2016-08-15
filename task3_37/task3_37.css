@@ -30,7 +30,6 @@
 	position: fixed;
 }
 .float-layer {
-	position: absolute;
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%);
@@ -48,9 +47,15 @@
 	color: white;
 	padding-left: 8px;
 	cursor: move;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	-moz-user-select: none;
 }
 .float-content {
 	padding: 15px 0 0 8px;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	-moz-user-select: none;
 }
 .confirm,.cancel{
 	width: 150px;
@@ -61,6 +66,7 @@
 	border: none;
 	border-radius: 5px;
 	font-size: 20px;
+	margin-right: 10px;
 }
 .btn {
 	position:absolute;
