@@ -1,3 +1,15 @@
+##**插件介绍**
+使用方法：
+
+在html中，写入一个钩子，<div class="className"></div>
+var layer = new floatLayer();
+layer.hide();//隐藏浮出层
+var btn = ...，负责显示浮出层的按钮
+EventUtil.addHandler(btn, 'click', layer.show.bind(layer));
+
+
+
+
 ##**任务目的**
 
 练习综合运用HTML、CSS、JavaScript实现局部功能
