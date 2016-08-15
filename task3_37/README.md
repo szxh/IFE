@@ -1,7 +1,7 @@
 ##**插件介绍**
 使用方法：
 
-在html中，写入一个钩子，<div class="className"></div>
+在html中，写入一个钩子，/<div class="className"></div>/
 var layer = new floatLayer();
 layer.hide();//隐藏浮出层
 var btn = ...，负责显示浮出层的按钮
