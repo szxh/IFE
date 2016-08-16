@@ -1,0 +1,40 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+#table-sort,#table-sort th,#table-sort td {
+	border: 1px solid #BBBBBB;
+	border-collapse: collapse;
+	font-size: 20px;
+}
+#table-sort th,#table-sort td {
+	width: 160px;
+	text-align: center;
+	height: 40px;
+	lin-height: 40px;
+}
+#table-sort th {
+	color: white;
+	background-color: #2F2F38;
+}
+#triangle-up {
+	display: block;
+	width: 0;
+	height: 0;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-bottom: 10px solid white;
+	margin-bottom: 5px;
+}
+#triangle-down {
+	display: block;
+	width: 0;
+	height: 0;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 10px solid white;
+}
+#triangle-wrap {
+	float: right;
+	margin-right: 20px;
+}
