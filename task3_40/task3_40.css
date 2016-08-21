@@ -1,5 +1,5 @@
 .date-wrap {
-	width: 250px;
+	width: 240px;
 	border: 1px solid #AAAAAA;
 	border-radius: 5px;
 }
@@ -14,22 +14,35 @@
 	font-size: 16px;
 }
 .date-content {
-	padding: 0;
+	padding: 0 3%;
 	margin: 0;
-	width: 100%;
-	text-align: center;
+	width: 94%;
+	
 }
 .date-content li {
 	display: inline-block;
 	text-align: center;
 	margin: 10px 6px;
 	width: 20px;
+	cursor: pointer;
 }
 .date-left {
 	float: left;
 	margin-left: 10px;
+	cursor: pointer;
 }
 .date-right {
 	float: right;
 	margin-right: 10px;
+	cursor: pointer;
+}
+.gray {
+	color: #B3AFAC;
+}
+.selected {
+	background-color: #E74F4D;
+	color: white!important;
+}
+.red {
+	color: #E74F4D;
 }
