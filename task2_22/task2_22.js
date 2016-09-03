@@ -1,5 +1,5 @@
 
-let root = document.getElementsByClassName('root')[0],
+var root = document.getElementsByClassName('root')[0],
 	orderWrap = document.getElementsByClassName('order')[0],
 	nodeArr = [],
 	timer,
