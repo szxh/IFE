@@ -58,13 +58,13 @@ datePicker.prototype = {
 		
 		//构建渲染用的数据
 		var dateArr = [];
-		for (let i = 1;i < dateMax + 1; i++) {
+		for (var i = 1;i < dateMax + 1; i++) {
 			dateArr.push(i);
 		}
-		for (let i = lastMax; i > lastMax - this.day; i--) {
+		for (var i = lastMax; i > lastMax - this.day; i--) {
 			dateArr.unshift(i);
 		}
-		for (let i = 1; i < 7 - endDay; i++) {
+		for (var i = 1; i < 7 - endDay; i++) {
 			dateArr.push(i);
 		}
 		var self = this;
