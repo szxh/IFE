@@ -1,0 +1,27 @@
+{
+  "name": "task2_26",
+  "version": "1.0.0",
+  "description": "It's just for study of gulp and es6",
+  "main": "index.js",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-concat": "^2.6.0",
+    "gulp-jshint": "^2.0.1",
+    "gulp-less": "^3.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^2.0.0",
+    "jshint": "^2.9.3",
+    "livereload": "^0.5.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "szxh",
+  "license": "ISC",
+  "keywords": [
+    "ife",
+    "2016"
+  ]
+}
