@@ -1,23 +1,113 @@
+@green: #58FE01;
+
 body {
     background-color: #000;
     min-width: 1180px;
 }
+.wrapper {
+    width: 1300px;
+    height: 630px;
+    border: 1px solid @green;
+    position: relative;
+}
 .console {
-    width: 400px;
+    width: 500px;
     height: 300px;
-    float: right;
-    border: 1px solid green;
+    border: 1px solid @green;
     text-align: center;
     overflow: hidden;
-    margin-right: 70px;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 .console-title {
-    color: green;
+    color: @green;
     font-size: 25px;
-    border-bottom: 1px solid green;
+    border-bottom: 1px solid @green;
     width: 100%;
     display: inline-block;
     height: 40px;
     line-height: 40px;
+}
+.console-log {
+    overflow-y: scroll;
+}
+.commander {
+    color: @green;
+    width: 500px;
+    border: 1px solid @green;
+    margin-top: 20px;
+}
+.commander ul {
+    display: inline-block;
+    padding-left: 6%;
+}
+.commander ul li {
+    list-style: none;
+    float: left;
+    display: inline-block;
+    width: 80px;
+    height: 30px;
+    border: 1px solid @green;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+    margin-right: 8px;
+}
+.commander ul li:nth-child(1) {
+    cursor: default;
+}
+.aside {
+    width: 510px;
+    height: 630px;
+    float: right;
+    margin-right: 20px;
+    border-left: 1px solid @green;
+    padding-left: 100px;
+}
+.one {
+    width: 60px;
+    height: 20px;
+    border: 1px solid @green;
+    background-color: @green;
+    position: absolute;
+    left: 300px;
+    top: 235px;
+    font-size: 20px;
+    color: red;
+    font-weight: bold;
+}
+.two {
+    width: 60px;
+    height: 20px;
+    border: 1px solid @green;
+    background-color: @green;
+    position: absolute;
+    left: 300px;
+    top: 175px;
+    font-size: 20px;
+    color: red;
+    font-weight: bold;
+}
+.three {
+    width: 60px;
+    height: 20px;
+    border: 1px solid @green;
+    background-color: @green;
+    position: absolute;
+    left: 300px;
+    top: 115px;
+    font-size: 20px;
+    color: red;
+    font-weight: bold;
+}
+.four {
+    width: 60px;
+    height: 20px;
+    border: 1px solid @green;
+    background-color: @green;
+    position: absolute;
+    left: 300px;
+    top: 55px;
+    font-size: 20px;
+    color: red;
+    font-weight: bold;
 }
