@@ -4,7 +4,13 @@ var gulp = require('gulp'),
 	concat = require('gulp-concat'),
 	uglify = require('gulp-uglify'),
 	rename = require('gulp-rename'),
-    livereload = require('livereload');
+    babel = require('gulp-babel'),
+    livereload = require('livereload'),
+    browserify = require('browserify'),
+    babelify = require('babelify'),
+    source = require('vinyl-source-stream'),
+    sourcemaps = require('gulp-sourcemaps'),
+    glob = require('node-glob');
 
 gulp.task('lint', function() {
 	return gulp.src('src/js/*.js')
@@ -21,9 +27,14 @@ gulp.task('less', function() {
 });
 
 gulp.task('scripts', function() {
-    return gulp.src('./src/js/*.js')
+     return browserify({entries: ['./src/js/commander.js', './src/js/main.js', './src/js/spaceship.js', './src/js/util.js'], debug: true})
+        .transform(babelify)
+        .bundle()
+        .pipe(source('bundle.js'))
         .pipe(concat('all.min.js'))
-        .pipe(gulp.dest('./dist/js'));
+        .pipe(gulp.dest('dist'));
+    
+ 
 });
 
 gulp.task('default', function() {
