@@ -10,7 +10,8 @@ var gulp = require('gulp'),
     babelify = require('babelify'),
     source = require('vinyl-source-stream'),
     sourcemaps = require('gulp-sourcemaps'),
-    glob = require('node-glob');
+    glob = require('node-glob'),
+    buffer = require('vinyl-buffer');
 
 gulp.task('lint', function() {
 	return gulp.src('src/js/*.js')
@@ -27,18 +28,26 @@ gulp.task('less', function() {
 });
 
 gulp.task('scripts', function() {
-     return browserify({entries: ['./src/js/commander.js', './src/js/main.js', './src/js/spaceship.js', './src/js/util.js'], debug: true})
-        .transform(babelify)
-        .bundle()
+     return gulp.src('src/js/*.js')
+        .pipe(babel({
+            presets: ['es2015']
+        }))
+        .pipe(gulp.dest('dist/js'))
+});
+
+gulp.task('browser', function() {
+    var b = browserify({
+            entries: ['dist/js/main.js'],
+            debug: true
+        });
+
+    return b.bundle()
         .pipe(source('bundle.js'))
-        .pipe(concat('all.min.js'))
-        .pipe(gulp.dest('dist'));
-    
- 
+        .pipe(gulp.dest('dist/js'))
 });
 
 gulp.task('default', function() {
-    gulp.start('lint', 'less', 'scripts', 'watch');
+    gulp.start('lint', 'less', 'scripts', 'browser', 'watch');
 });
 
 gulp.task('watch', function() {
