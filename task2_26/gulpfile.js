@@ -27,27 +27,28 @@ gulp.task('less', function() {
         .pipe(gulp.dest('./dist/css'));
 });
 
+
+
 gulp.task('scripts', function() {
-     return gulp.src('src/js/*.js')
-        .pipe(babel({
-            presets: ['es2015']
-        }))
-        .pipe(gulp.dest('dist/js'))
-});
-
-gulp.task('browser', function() {
-    var b = browserify({
-            entries: ['dist/js/main.js'],
+        return browserify({
+            entries: ['src/js/main.js', 
+                    'src/js/spaceship.js', 
+                    'src/js/util.js', 
+                    'src/js/commander.js',
+                    'src/js/log.js',
+                    'src/js/BUS.js'],
             debug: true
-        });
-
-    return b.bundle()
+        })
+        .transform('babelify', {presets: ['es2015']})
+        .bundle()
         .pipe(source('bundle.js'))
+        .pipe(buffer())
+        .pipe(uglify())
         .pipe(gulp.dest('dist/js'))
 });
 
 gulp.task('default', function() {
-    gulp.start('lint', 'less', 'scripts', 'browser', 'watch');
+    gulp.start('lint', 'less', 'scripts', 'watch');
 });
 
 gulp.task('watch', function() {
