@@ -1,4 +1,8 @@
-var Util = {
+var util = {
+
+    $: function(selector) {
+        return document.querySelector(selector);
+    },
 
     addHandler: function(element, type, handler){
         if (element.addEventListener){
@@ -107,3 +111,4 @@ var Util = {
 
 };
 
+export {util};

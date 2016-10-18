@@ -1,17 +1,22 @@
+import {util} from './util';
+import {log} from './log';
+import {start, stop} from './main';
+
+
 //飞船类
-var Spaceship = function(id) {
+var spaceship = function(id) {
     this.speed = 20;//flying speed
     this.consume = 5; //consume speed of fuel
     this.charge = 2;// charge speed
     this.energy = 100;//percent of energy
     this.fly = false;// the state of spaceship, flying or not
     this.id = id;//only identifier of spaceship
-    this.div = $('.' + id);//dom structure in html
+    this.div = util.$('.' + id);//dom structure in html
     this.deg = 0;//the flying deg of spaceship
     this.timer;
 };
 
-Spaceship.prototype = {
+spaceship.prototype = {
 
     dynamSystem: function(command) {
         var radius;
@@ -57,6 +62,7 @@ Spaceship.prototype = {
             return;
         }
         log(command, true);
+        console.log('hhh');
         switch(command.order) {
             case 'start':
                 this.dynamSystem(command);
@@ -76,3 +82,5 @@ Spaceship.prototype = {
         this.div.parentNode.removeChild(this.div);
     }
 };
+
+export {spaceship};

@@ -1,11 +1,11 @@
+import {util} from './util';
+import {commander} from './commander';
 
-function $(selector) {
-    return document.querySelector(selector);
-}
+
 
 //可以接受任意个参数，作为圆的半径，画出参数个数的同心圆
 function circle() {
-    var canvas =$('#circle');
+    let canvas = util.$('#circle');
     if (canvas.getContext) {
         var ctx = canvas.getContext('2d');
     }
@@ -27,49 +27,7 @@ function circle() {
 circle(25, 80, 140, 200, 260);
 
 
-
-
-//orbit上创建数组存储飞船
-var orbit = [],
-    loss = 0.3,
-    consoleLog = $('.console-log');
-
-
-
-//模拟传递介质Mediator
-function mediator(command) {
-    var random = Math.random();
-    if (random < loss) {
-        log(command, false);
-        return;
-    }
-    setTimeout(function() {
-        for (var i = 0; i < orbit.length; i++) {
-            if (orbit[i]) {
-                orbit[i].signalReceive(command);
-            }
-        }
-    }, 1000);
     
-}
-
-
-
-
-//工具函数，用于在控制台上输出操作结果
-function log(command, state) {
-    var text = command.order + ' ship' + ' in orbit ' + command.id + '......';
-    if (!state) {
-        text = 'failed to ' + text;
-    }
-    var li = document.createElement('li'),
-        logs = document.createTextNode(text);
-    li.appendChild(logs);
-    consoleLog.appendChild(li);
-    consoleLog.scrollTop = consoleLog.scrollHeight - consoleLog.offsetHeight;
-}
-
-
 
 
 //工具函数，用于完成飞行动画
@@ -109,7 +67,7 @@ function stop(that) {
 
 
 //委托事件
-var command = $('.commander');
-Util.addHandler(command, 'click', commander.send.bind(commander));
+var command = util.$('.commander');
+util.addHandler(command, 'click', commander.send.bind(commander));
 
-
+export {start, stop};
